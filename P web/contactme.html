@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ContactMe</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" type="text/css" href="contact.css">
+        <link rel="stylesheet" type="text/css" href="test.css">
+        
+    </head>
+    <body>
+        <nav>
+            <ul class="all">
+        <li><a href="test.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Home
+        </a></li>
+        <li><a href="About.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            About
+        </a></li>
+        <li><a href="Skills.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Skills
+        </a></li>
+        <li><a href="contactme.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          Contact Me
+        </a></li>
+    </ul>
+    </nav>
+        <section class= "socialMedia">
+            <ul class="sci">
+                <li data-text="Facebook" data-color="#1877f2">
+                    <a href="https://www.facebook.com/naol.atomsa" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li data-text="Instagram" data-color="#e4405f">
+                    <a href="https://www.instagram.com/naol__atomsa/?hl=en" class="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li data-text="Twitter" data-color="#0099ff">
+                    <a href="https://twitter.com/naol_atomsa" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li data-text="Telegram" data-color="#808080">
+                    <a href="https://t.me/Naolaz" class="Telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </section>
+        <script src="vanilla-tilt.min.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".sci li a"),
+             {
+		max: 30,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+	});
+            let list =document.querySelectorAll('.sci li');
+            let bg = document.querySelector('.socialMedia');
+            list.forEach(elements => {
+                elements.addEventListener('mouseenter', function
+                (event){
+                    let color = event.target.getAttribute
+                    ('data-color');
+                    bg.style.backgroundColor = color;
+        
+                })
+                elements.addEventListener('mouseleave', function
+                (event){
+                   
+                    bg.style.backgroundColor = '#fff';
+        
+                })
+            })
+        </script>
+    </body>
+</html>
